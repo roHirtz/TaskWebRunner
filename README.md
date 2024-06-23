@@ -8,3 +8,5 @@ git commit -m "版本号"
 git push
 
 git pull
+
+检测版本号
