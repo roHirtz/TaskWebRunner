@@ -1,0 +1,6 @@
+chromedriver:
+  chrome: driver/chromedriver.exe
+  firefox: driver/firefox.exe
+  edge: driver/edge.exe
+
+testdata: "./data"

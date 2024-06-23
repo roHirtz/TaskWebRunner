@@ -1,0 +1,12 @@
+sender:
+  host: smtp.qq.com
+  user: 2311412716@qq.com
+  password: ggrdxkoszkhiebff
+
+receiver:
+  490489027@qq.com: Rynn
+
+cc:
+  - 490489027@qq.com
+
+active: False
