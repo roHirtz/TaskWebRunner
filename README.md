@@ -6,3 +6,5 @@ git remote add origin https://github.com/roHirtz/TaskWebRunner.git
 gid add .
 git commit -m "版本号"
 git push
+
+git pull
