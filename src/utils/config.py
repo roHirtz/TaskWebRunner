@@ -1,5 +1,6 @@
-import yaml
+# -*- coding: utf-8 -*-
 
+import sys
 from src.utils.yamlloader import Yamlloader
 
 
@@ -11,7 +12,8 @@ class Config:
         """
             获取浏览器驱动文件地址
         """
-        return self.yaml['chromedriver'][browser]
+
+        return self.yaml['chromedriver'][sys.platform][browser]
 
     def get_test_data(self, method):
         """
