@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import pytest
 import os
 import sys
@@ -48,9 +50,3 @@ def pytest_terminal_summary(terminalreporter, exitstatus, config):
 def login(request):
     from src.utils.tagFunc import login
     return login(request)
-
-
-@pytest.fixture(params=[['hotshot0', '123456', 'A1B2']])
-def login_po(request):
-    from src.utils.tagFunc import login_po
-    return login_po(request)

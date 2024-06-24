@@ -1,7 +1,6 @@
-from selenium.webdriver.common.by import By
+# -*- coding: utf-8 -*-
 
-from src.po.index import Index
-from src.po.login import Login
+from selenium.webdriver.common.by import By
 from src.utils.pyselenium import PySelenium
 
 
@@ -23,12 +22,3 @@ def login(request):
 
     assert pyselenium.exist(verfy_ele)
 
-
-def login_po(request):
-    pyselenium = PySelenium()
-    indexpage = Index(pyselenium)
-    loginpage = Login(pyselenium)
-    indexpage.navigate()
-    indexpage.click_login()
-    loginpage.login(*request.param)
-    indexpage.assert_user()

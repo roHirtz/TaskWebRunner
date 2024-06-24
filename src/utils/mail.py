@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import yagmail
 import traceback
 from src.utils.logger import logger

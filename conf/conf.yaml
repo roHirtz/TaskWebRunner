@@ -1,6 +1,9 @@
 chromedriver:
-  chrome: driver/chromedriver.exe
-  firefox: driver/firefox.exe
-  edge: driver/edge.exe
+  win32:
+    chrome: driver/chromedriver.exe
+    firefox: driver/firefox.exe
+    edge: driver/edge.exe
+  linux:
+    chrome: driver/chromedriver
 
 testdata: "./data"
