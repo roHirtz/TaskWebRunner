@@ -5,6 +5,7 @@ import pytest
 
 from selenium.webdriver.common.by import By
 from src.utils.pyselenium import PySelenium
+from src.utils.config import Config
 
 
 # tb_system_banner
@@ -60,7 +61,7 @@ class TestBanner:
         self.driver.click(new_banner)
         self.driver.send_keys(new_banner_title, self.new_banner_title_count)
         self.driver.execute_script('document.querySelector(".el-upload__input").style.display="block"')
-        self.driver.send_keys(new_banner_uploadimg, r'./data/img/cute.png')
+        self.driver.send_keys(new_banner_uploadimg, Config().get_images_path('cute.png'))
         self.driver.send_keys(new_banner_outsidelink, 'https://www.douyu.com/6657')
         self.driver.force_to_wait(3)
         self.driver.click(new_banner_submit)

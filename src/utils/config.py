@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+import os
 import sys
 from src.utils.yamlloader import Yamlloader
 
@@ -26,3 +27,6 @@ class Config:
             获取浏览器options配置
         """
         return self.yaml['selenium']['options'][browser]
+
+    def get_images_path(self, img):
+        return os.getcwd() + r'data/img/' + img

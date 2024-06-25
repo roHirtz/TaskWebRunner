@@ -5,6 +5,7 @@ import pytest
 
 from selenium.webdriver.common.by import By
 from src.utils.pyselenium import PySelenium
+from src.utils.config import Config
 
 
 # tb_user
@@ -62,7 +63,7 @@ class TestUser:
         self.driver.send_keys(add_user_name, self.new_user_count)
         self.driver.send_keys(add_user_phone, self.new_user_phone)
         self.driver.execute_script('document.querySelector(".el-upload__input").style.display="block"')
-        self.driver.send_keys(add_user_img, r'./data/img/cute.png')
+        self.driver.send_keys(add_user_img, Config().get_images_path('cute.png'))
         self.driver.force_to_wait(3)
         self.driver.click(add_user_btn)
 
@@ -85,7 +86,7 @@ class TestUser:
         self.driver.click(edit_btn)
         self.driver.send_keys(update_user_name, self.new_user_newphone)
         self.driver.execute_script('document.querySelector(".el-upload__input").style.display="block"')
-        self.driver.send_keys(update_user_img, r'./data/img/cute.png')
+        self.driver.send_keys(update_user_img, Config().get_images_path('cute.png'))
         self.driver.force_to_wait(1)
         self.driver.click(update_user_btn)
 
