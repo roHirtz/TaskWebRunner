@@ -45,6 +45,7 @@ class TestUser:
 
     def teardown_class(self):
         self.driver.click(self.supermanager_manager)
+        self.driver.force_to_wait(1)
         self.driver.click(self.supermanager_manager_quit)
         self.driver.force_to_wait(3)
 
@@ -91,6 +92,7 @@ class TestUser:
         self.driver.force_to_wait(1)
         assert self.driver.exist(update_user_count)
 
+    # @pytest.mark.skip('跳过')
     @pytest.mark.parametrize('data', [['已冻结', 2], ['正常', 2], ['禁止发布任务', 1]])
     def test_search_user(self, data):
         status_manager = (By.XPATH, '//input[@placeholder="状态"]')

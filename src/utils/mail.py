@@ -8,7 +8,7 @@ from src.utils.logger import logger
 class Mail:
     def __init__(self):
         from src.utils.yamlloader import Yamlloader
-        self.__mail_conf = Yamlloader().load(r'conf/mail.yaml')
+        self.__mail_conf = Yamlloader().load(r'conf/conf.yaml')['mail']
 
     def send_mail(self, subject, content, attachments=None):
         """

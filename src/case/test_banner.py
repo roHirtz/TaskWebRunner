@@ -43,6 +43,7 @@ class TestBanner:
 
     def teardown_class(self):
         self.driver.click(self.supermanager_manager)
+        self.driver.force_to_wait(1)
         self.driver.click(self.supermanager_manager_quit)
         self.driver.force_to_wait(3)
 

@@ -42,9 +42,9 @@ class PySelenium:
 
         # 参数配置
         options = Options()
-        options.add_argument('--log-level=3')
-        options.add_argument('--start-maximized')
-        options.add_experimental_option('excludeSwitches', ['enable-automation'])
+        for option in Config().get_selenium_options(browser)['add_argument']:
+            options.add_argument(option)
+
         return options
 
     @classmethod

@@ -1,9 +1,30 @@
-chromedriver:
-  win32:
-    chrome: driver/chromedriver.exe
-    firefox: driver/firefox.exe
-    edge: driver/edge.exe
-  linux:
-    chrome: driver/chromedriver
+selenium:
+  chromedriver:
+    win32:
+      chrome: driver/chromedriver.exe
+      firefox: driver/firefox.exe
+      edge: driver/edge.exe
+    linux:
+      chrome: driver/chromedriver
+  options:
+    chrome:
+      add_argument:
+        - "--log-level=3"
+        - "--start-maximized"
+        - '--headless'
 
 testdata: "./data"
+
+mail:
+  sender:
+    host: smtp.qq.com
+    user: 2311412716@qq.com
+    password: ggrdxkoszkhiebff
+
+  receiver:
+    490489027@qq.com: Rynn
+
+  cc:
+    - 490489027@qq.com
+
+  active: False
