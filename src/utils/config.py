@@ -29,4 +29,4 @@ class Config:
         return self.yaml['selenium']['options'][browser]
 
     def get_images_path(self, img):
-        return os.getcwd() + r'data/img/' + img
+        return os.getcwd() + r'/data/img/' + img
