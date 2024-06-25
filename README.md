@@ -25,3 +25,7 @@ git pull
 检测版本号
 
 sudo apt install python3-pytest
+
+驱动文件赋权：
+
+    chmod -R 777 driver/chromedriver

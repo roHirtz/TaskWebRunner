@@ -60,7 +60,7 @@ class TestBanner:
         self.driver.click(new_banner)
         self.driver.send_keys(new_banner_title, self.new_banner_title_count)
         self.driver.execute_script('document.querySelector(".el-upload__input").style.display="block"')
-        self.driver.send_keys(new_banner_uploadimg, r'H:\py_home\pythonProject\Selenium-WEB自动化\cute.png')
+        self.driver.send_keys(new_banner_uploadimg, r'./data/img/cute.png')
         self.driver.send_keys(new_banner_outsidelink, 'https://www.douyu.com/6657')
         self.driver.force_to_wait(3)
         self.driver.click(new_banner_submit)
