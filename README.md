@@ -19,13 +19,16 @@
     gid add .
     git commit -m "版本号"
     git push
-
-git pull
-
-检测版本号
-
-sudo apt install python3-pytest
+    git pull
 
 驱动文件赋权：
 
-    chmod -R 777 driver/chromedriver
+    chmod -R 777 <路径>
+
+sudo apt install python3-pytest
+
+需要注意linux需使用绝对路径
+
+清华源：
+
+    pip3 config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
