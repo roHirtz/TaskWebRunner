@@ -20,6 +20,7 @@
     git commit -m "版本号"
     git push
     git pull
+    git restore
 
 驱动文件赋权：
 
