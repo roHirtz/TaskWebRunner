@@ -30,3 +30,9 @@ class Config:
 
     def get_images_path(self, img):
         return os.getcwd() + r'/data/img/' + img
+
+    def get_jenkins_conf(self):
+        return self.yaml['jenkins']
+
+    def get_dingtalk_conf(self):
+        return self.yaml['Dingtalk']

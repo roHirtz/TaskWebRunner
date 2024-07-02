@@ -34,7 +34,7 @@ class Report:
         return f'自动化API测试报告{Environment.get_environment("start_time")}'
 
     @staticmethod
-    def get_report_content(passed, skipped, failed):
+    def get_report_content(passed, skipped, failed, url, report):
         """
             获取测试报告结果内容
         """
@@ -52,5 +52,8 @@ class Report:
         for item in failed:
             for k, v in item.items():
                 content = content + k + '   -   ' + v + '\n\n ************************************************** \n\n'
+
+        content = content + f'\nJenkins地址：{url}\n'
+        content = content + f'\n测试报告地址：{report}\n'
 
         return content

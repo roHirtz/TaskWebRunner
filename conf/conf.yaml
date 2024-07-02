@@ -31,4 +31,15 @@ mail:
   cc:
     - 490489027@qq.com
 
-  active: False
+  active: True
+
+jenkins:
+  url: 'http://192.168.1.4:8080/'
+  user: 'hotshot0'
+  password: 'd3ffd538f087438696c107b70057f1bd'
+  job_name: 'taskWebRunner'
+
+Dingtalk:
+  secret: 'SEC6989e061214eea56df118820aac007b569f956c613655e5e52c98389590845ac'
+  access_token: '2b24bd3a7c44c6740665f25017c5ee34da61d2ad0d006f38a38f8c43056773e3'
+  active: True

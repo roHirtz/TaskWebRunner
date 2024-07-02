@@ -38,12 +38,16 @@ def pytest_terminal_summary(terminalreporter, exitstatus, config):
     """
     from src.utils.report import Report
     from src.utils.mail import Mail
+    from src.utils.pyjenkins import Pyjenkins
+    from src.utils.pydingtalk import PyDingTalk
 
     passed, failed, skipped = Report.get_report_summary(terminalreporter)
+    url, report = Pyjenkins().get_msg()
     subject = Report.get_report_subject()
-    content = Report.get_report_content(passed, skipped, failed)
+    content = Report.get_report_content(passed, skipped, failed, url, report)
 
     Mail().send_mail(subject, content)
+    PyDingTalk().send_text_msg(content)
 
 
 @pytest.fixture(params=[['hotshot0', '123456', 'A1B2']])
