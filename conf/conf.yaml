@@ -36,7 +36,7 @@ mail:
 jenkins:
   url: 'http://192.168.1.4:8080/'
   user: 'hotshot0'
-  password: 'd3ffd538f087438696c107b70057f1bd'
+  password: '118e19fdfb099ec59ba5b76bcb3503f1d9'
   job_name: 'taskWebRunner'
 
 Dingtalk:
