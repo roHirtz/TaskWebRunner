@@ -22,6 +22,7 @@ def pytest_runtest_makereport(item, call):
     """
     from src.utils.pyselenium import PySelenium
     from src.utils.mail import Mail
+    from src.utils.config import Config
     report = yield
     report = report.get_result()
     if report.when == 'call':
@@ -29,7 +30,7 @@ def pytest_runtest_makereport(item, call):
             PySelenium().save_screenshot('./report/failed.png')
             Mail().send_mail('自动化测试失败截图',
                              f'{report.nodeid} - 执行失败截图',
-                             './report/failed.png')
+                             Config().get_fail_image_path('failed.png'))
 
 
 def pytest_terminal_summary(terminalreporter, exitstatus, config):

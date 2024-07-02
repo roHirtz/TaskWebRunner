@@ -31,6 +31,9 @@ class Config:
     def get_images_path(self, img):
         return os.getcwd() + r'/data/img/' + img
 
+    def get_fail_image_path(self, img) -> str:
+        return os.getcwd() + r'/report/' + img
+
     def get_jenkins_conf(self):
         return self.yaml['jenkins']
 
